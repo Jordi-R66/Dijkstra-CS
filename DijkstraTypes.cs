@@ -8,6 +8,25 @@ namespace DijkstraCS {
 			ERR = 3
 		}
 
+		public readonly struct Coords
+		{
+			public readonly double x, y, z;
+
+			public Coords(double x, double y, double z)
+			{
+				this.x = x;
+				this.y = y;
+				this.z = z;
+			}
+
+			public double getNorm()
+			{
+				return Math.Sqrt(x * x + y * y + z * z);
+			}
+
+			public static Coords operator -(Coords a, Coords b) => new Coords(b.x - a.x, b.y - a.y, b.z - a.z);
+		}
+
 		public class Sommet
 		{
 			private Int64 id;
