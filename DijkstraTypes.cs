@@ -30,7 +30,7 @@ namespace DijkstraCS {
 		public class Sommet
 		{
 			private Int64 id;
-			readonly private String name;
+			private String name;
 
 			private Double x, y, z;
 
