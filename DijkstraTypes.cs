@@ -32,7 +32,19 @@ namespace DijkstraCS {
 			private Int64 id;
 			private String name;
 
-			private Double x, y, z;
+			private Coords coords;
+
+			private List<Sommet> getsTo;
+
+			public Int64 Id
+			{
+				get { return id; }
+			}
+
+			public Coords Coords
+			{
+				get { return coords; }
+			}
 
 			public Sommet(Int64 id, String name, Double x, Double y, Double z)
 			{
