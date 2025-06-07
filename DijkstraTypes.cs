@@ -51,9 +51,14 @@ namespace DijkstraCS {
 				this.id = id;
 				this.name = name;
 
-				this.x = x;
-				this.y = y;
-				this.z = z;
+				this.coords = new Coords(x, y, z);
+				this.getsTo = new List<Sommet>();
+			}
+
+			public double getDistance(Sommet other)
+			{
+				Coords diff = coords - Coords;
+				return diff.getNorm();
 			}
 		}
 	}
