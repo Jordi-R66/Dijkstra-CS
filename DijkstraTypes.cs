@@ -25,6 +25,10 @@ namespace DijkstraCS {
 			}
 
 			public static Coords operator -(Coords a, Coords b) => new Coords(b.x - a.x, b.y - a.y, b.z - a.z);
+			public override String ToString()
+			{
+				return $"({x}, {y}, {z})";
+			}
 		}
 
 		public class Sommet
