@@ -64,6 +64,16 @@ namespace DijkstraCS {
 				Coords diff = coords - Coords;
 				return diff.getNorm();
 			}
+
+			public override int GetHashCode()
+			{
+				return base.GetHashCode();
+			}
+
+			public override bool Equals(object? obj)
+			{
+				return ReferenceEquals(this, obj);
+			}
 		}
 	}
 }
