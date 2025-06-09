@@ -38,7 +38,7 @@ namespace DijkstraCS {
 
 			private readonly Coords coords;
 
-			private HashSet<Sommet> getsTo;
+			private List<Sommet> getsTo;
 
 			public Int64 Id
 			{
@@ -55,7 +55,7 @@ namespace DijkstraCS {
 				get { return coords; }
 			}
 
-			public HashSet<Sommet> GetsTo
+			public List<Sommet> GetsTo
 			{
 				get { return getsTo; }
 			}
@@ -66,7 +66,7 @@ namespace DijkstraCS {
 				this.name = name;
 
 				this.coords = new Coords(x, y, z);
-				this.getsTo = new HashSet<Sommet>();
+				this.getsTo = new List<Sommet>();
 			}
 
 			public override string ToString()
