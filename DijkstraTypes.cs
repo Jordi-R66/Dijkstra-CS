@@ -55,6 +55,11 @@ namespace DijkstraCS {
 				get { return coords; }
 			}
 
+			public HashSet<Sommet> GetsTo
+			{
+				get { return getsTo; }
+			}
+
 			public Sommet(Int64 id, String name, Double x, Double y, Double z)
 			{
 				this.id = id;
@@ -62,6 +67,11 @@ namespace DijkstraCS {
 
 				this.coords = new Coords(x, y, z);
 				this.getsTo = new HashSet<Sommet>();
+			}
+
+			public override string ToString()
+			{
+				return $"Sommet(id: {Id}, name: {Name}, coords: {Coords})";
 			}
 
 			public void addNeighbour(Sommet s)
