@@ -33,12 +33,12 @@ namespace DijkstraCS {
 
 		public class Sommet
 		{
-			private Int64 id;
-			private String name;
+			private readonly Int64 id;
+			private readonly String name;
 
-			private Coords coords;
+			private readonly Coords coords;
 
-			private List<Sommet> getsTo;
+			private HashSet<Sommet> getsTo;
 
 			public Int64 Id
 			{
@@ -56,7 +56,12 @@ namespace DijkstraCS {
 				this.name = name;
 
 				this.coords = new Coords(x, y, z);
-				this.getsTo = new List<Sommet>();
+				this.getsTo = new HashSet<Sommet>();
+			}
+
+			public void addNeighbour(Sommet s)
+			{
+				this.getsTo.Add(s);
 			}
 
 			public double getDistance(Sommet other)
