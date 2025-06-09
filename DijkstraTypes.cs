@@ -45,6 +45,11 @@ namespace DijkstraCS {
 				get { return id; }
 			}
 
+			public String Name
+			{
+				get { return name; }
+			}
+
 			public Coords Coords
 			{
 				get { return coords; }
