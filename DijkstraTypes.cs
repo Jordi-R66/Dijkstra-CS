@@ -1,4 +1,5 @@
-namespace DijkstraCS {
+namespace DijkstraCS
+{
 	namespace Types
 	{
 		public enum TypeLien
